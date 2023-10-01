@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>CaLcuLo</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+        integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+    <body id="page-top">
+        <!-- Login form -->
+        <!-- create a centered login and password form using bootstrap -->
+        <div class="container" id="container-form">
+            <div class="row justify-content-center mt-5">
+                <div class="col-12 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h1 class="card-title text-center">Login</h1>
+                            <form id="loginForm">
+                                <div class="mb-3">
+                                    <label for="login" class="form-label">Login</label>
+                                    <input type="text" class="form-control" id="login" name="login" placeholder="Introduce tu login" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Introduce tu password" required>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary" id="loginButton">Login</button>
+                                </div>
+                                <div id="loginError" class="alert alert-danger mt-3" style="display: none;">
+                                    Error en el inicio de sesión. Verifica tu nombre de usuario y contraseña.
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Resto del contenido oculto -->
+        <div id="content" style="display: none;">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top mb-4" id="mainNav">
+                <div class="container px-4">
+                    <a class="navbar-brand" href="#page-top">App Backend Calculo</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span id="navbarUsername"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                    <li><a class="dropdown-item" href="#" id="logoutButton">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-6">
+                        <div class="card mt-5">
+                            <div class="card-body">
+                                <h1 class="card-title text-center">Calculadora de Ecuaciones Cuadráticas</h1>
+                                <form id="form_ecuacion_cuadratica">
+                                    <div class="mb-3">
+                                        <label for="coeficienteA" class="form-label">Coeficiente A</label>
+                                        <input type="text" class="form-control" id="a" name="coeficienteA" placeholder="Introduce el coeficiente A" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="coeficienteB" class="form-label">Coeficiente B</label>
+                                        <input type="text" class="form-control" id="b" name="coeficienteB" placeholder="Introduce el coeficiente B" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="coeficienteC" class="form-label">Coeficiente C</label>
+                                        <input type="text" class="form-control" id="c" name="coeficienteC" placeholder="Introduce el coeficiente C" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary" id="calcularEcuacionButton">Calcular Soluciones</button>
+                                </form>
+                                <!-- Crear un div para mostrar las soluciones -->
+                                <div class="mt-3" id="solucionesEcuacion"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- Footer-->
+            <footer class="py-5 bg-dark">
+                <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Alan McLure 2023</p></div>
+            </footer>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
